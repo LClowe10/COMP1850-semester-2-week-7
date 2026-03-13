@@ -38,7 +38,7 @@ int main(void)
 
     /* Authenticate by comparing acquired and stored passwords */
 
-    if (strcmp(password, input) == 0) {
+    if (strcmp(REQUIRED_PASSWORD, input) == 0) {
         printf("\nLogin succeeded.\n\n");
         return 0;
     }

@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
     do {
         choice = -1;
         display_menu();
-        while (choice <= 1)
+        while (choice <= 0)
             choice = get_user_menu_choice("Enter choice");
 
         switch (choice) {
@@ -294,8 +294,8 @@ void print_image_info(const char *filename, int height, int width, int max_gray)
  */
 void print_image_values(unsigned char **pixels, int height, int width) {
     printf("\nImage Pixel Values (%dx%d):\n", width, height);
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
+    for (int i = 0; i < height - 1; i++) {
+        for (int j = 0; j < width - 1; j++) {
             printf("%3d ", pixels[i][j]);
         }
         printf("\n");
